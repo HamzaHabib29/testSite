@@ -26,7 +26,7 @@
         document.addEventListener('DOMContentLoaded', function () {
             function navigate() {
                 const path = window.location.pathname;
-                const validPaths = ['/businesstvdeals', '/home', '/about', '/contact']; // Add your valid routes here
+                const validPaths = ['/businesstvdeals', '/index.html', '/about', '/contact']; // Add your valid routes here
 
                 if (!validPaths.includes(path)) {
                     window.location.href = '/404.html'; // Redirect to your error page
