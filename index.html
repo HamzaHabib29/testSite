@@ -22,30 +22,7 @@
     <link href="https://fonts.googleapis.com/css?family=Sarabun:200,300,400,500,600,700,800|Source+Sans+Pro:300,400,600,700,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            
-            function navigate() {
-                debugger
-                const path = window.location.pathname;
-		var QAUrl = '/testSite';
-                const validPaths = ['/businesstvdeals', '/index.html', '/testSite/', '/testSite/index.html']; // Add your valid routes here
-
-                console.log(`Current path: ${path}`); // Debugging line
-        if (!validPaths.includes(path)) { 
-		if (window.location.href.includes(QAUrl)) {
-		history.replaceState(null, '', QAUrl + '/404.html');
-		}
-		else{
-		history.replaceState(null, '', '/404.html'); 
-	}
-        }
-            }
-
-            window.onpopstate = navigate;
-            navigate();
-        });
-    </script>
+    
 
 </head>
 
