@@ -34,7 +34,7 @@
 
                 console.log(`Current path: ${path}`); // Debugging line
         if (!validPaths.includes(path)) { 
-		if (window.location.href.toLowerCase().indexOf(QAUrl) > -1) {
+		if (window.location.href.includes(QAUrl)) {
 		history.replaceState(null, '', QAUrl + '/404.html');
 		}
 		else{
