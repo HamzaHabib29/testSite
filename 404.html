@@ -29,14 +29,15 @@
             function navigate() {
                 debugger
                 const path = window.location.pathname;
-		
+		var QAUrl = '/testSite';
                 const validPaths = ['/businesstvdeals', '/index.html', '/testSite/', '/testSite/index.html']; // Add your valid routes here
 
                 console.log(`Current path: ${path}`); // Debugging line
         if (!validPaths.includes(path)) {
-            console.log('Invalid path, redirecting to 404.html'); // Debugging line
-            history.replaceState(null, '', '/404.html');
-        }
+            window.location.href = path + '/404.html'; 
+        }else{
+		window.location.href = '/404.html'; 
+	}
             }
 
             window.onpopstate = navigate;
