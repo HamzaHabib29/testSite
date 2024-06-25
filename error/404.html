@@ -38,7 +38,7 @@
     color: #fff !important;
 }
 	</style>
-    <script>
+    <!-- <script>
         document.addEventListener('DOMContentLoaded', function () {
 
             function navigate() {
@@ -66,8 +66,17 @@
             window.onpopstate = navigate;
             navigate();
         });
-    </script>
+    </script> -->
+    <script>
+        const validRoutes = ['/businesstvdeals/', '/index.html', '/testSite/', '/testSite/index.html'];
+        const currentPath = window.location.pathname;
 
+// Check if the current pathname is in the array of valid routes
+if (!validRoutes.includes(currentPath)) {
+    // Redirect to the error page if the pathname is not valid
+    window.location.href = '/error.html';
+}
+    </script>
 </head>
 <body>
 <a class="scrollup" href="#">Scroll</a>

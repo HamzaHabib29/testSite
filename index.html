@@ -22,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css?family=Sarabun:200,300,400,500,600,700,800|Source+Sans+Pro:300,400,600,700,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script>
+    <!-- <script>
         document.addEventListener('DOMContentLoaded', function () {
 
             function navigate() {
@@ -50,6 +50,16 @@
             window.onpopstate = navigate;
             navigate();
         });
+    </script> -->
+    <script>
+        const validRoutes = ['/businesstvdeals/', '/index.html', '/testSite/', '/testSite/index.html'];
+        const currentPath = window.location.pathname;
+
+// Check if the current pathname is in the array of valid routes
+if (!validRoutes.includes(currentPath)) {
+    // Redirect to the error page if the pathname is not valid
+    window.location.href = '/error.html';
+}
     </script>
 
 
