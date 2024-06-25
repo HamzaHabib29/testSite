@@ -23,6 +23,25 @@
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/js-webshim/minified/polyfiller.js"></script>
 	<script type="text/jscript" src="js/bottom-top-move.js"></script>
+	<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            function navigate() {
+                debugger
+                const path = window.location.pathname;
+                const validPaths = ['/businesstvdeals', '/index.html', '/testSite/', '/testSite/index.html']; // Add your valid routes here
+
+                console.log(`Current path: ${path}`); // Debugging line
+        if (!validPaths.includes(path)) {
+            console.log('Invalid path, redirecting to 404.html'); // Debugging line
+            window.location.href = '/404.html'; // Redirect to your error page
+        }
+            }
+
+            window.onpopstate = navigate;
+            navigate();
+        });
+    </script>
   <script>
        webshim.activeLang('en');
        webshims.polyfill('forms');
